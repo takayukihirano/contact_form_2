@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+
+    <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/customstyle.css">
+      <link href="https://fonts.googleapis.com/css?family=Fascinate+Inline&display=swap" rel="stylesheet">
+
+    <title>お問い合わせ</title>
+</head>
+<body>
+    <div class="container mt-5 mb-5">
+    <h1>お問い合わせについて</h1>
+    <ul>
+        <li>お客さまの個人情報、お寄せいただいた相談内容は厳重に取扱い、プライバシー保護に努めます。</li>
+        <li>お問い合わせには、受付時間内に対応させていただきます。<br>受付時間：9:00～17:00（土・日・祝日・年末年始・夏季休暇を除く）</li>
+        <li>弊社からお返事させていただくことが適当でない場合や、取引関連のお問い合わせには、お返事を差し上げられない場合もございます。<br>あらかじめご了承ください。 </li>
+    </ul>
+    <h1>お問い合わせ内容入力</h1>
+    <p>お問い合わせ内容をご入力の上、「確認画面へ」ボタンをクリックしてください。</p>
+
+    <form method="POST" action="check2.php">
+        <!-- GET/POST　情報の受け渡しができる -->
+        <div class="form-group">
+            <label>お名前 <span class="badge badge-danger">必須</span></label>
+            <div class="col-sm-8">
+            <input type="text" name="namae" placeholder="例）山田太郎" value="" class="form-control">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>ふりがな <span class="badge badge-danger">必須</span></label>
+            <div class="col-sm-8">
+                <input type="text" name="furigana" placeholder="例）やまだたろう" value="" class="form-control">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>メールアドレス <span class="badge badge-danger">必須</span></label>
+            <div class="col-sm-8">
+                <input type="text" name="email" placeholder="例）guest@example.com" value="" class="form-control">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>電話番号 <span class="badge badge-danger">必須</span></label>
+            <div class="col-sm-8">
+                <input type="text" name="tel" placeholder="例）0000000000" value="" class="form-control">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>性別 <span class="badge badge-danger">必須</span></label><br>
+            <input type="radio" name="sex" value="男性" checked> 男性
+            <input type="radio" name="sex" value="女性"> 女性
+        </div>
+
+        <div class="form-group">
+            <label>お問い合わせ項目 <span class="badge badge-danger">必須</span></label>
+            <div class="col-sm-8">
+            <select name="item" class="form-control">
+                <option value="">お問い合わせ項目を選択してください</option>
+                <option value="商品について">商品について</option>
+                <option value="採用について">採用について</option>
+                <option value="ご意見・ご要望">ご意見・ご要望</option>
+            </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>お問い合わせ内容 <span class="badge badge-danger">必須</span></label><br>
+            <div class="col-sm-12">
+            <textarea name="content" rows="7" placeholder="お問合せ内容を入力" class="form-control"></textarea>
+            </div>
+        </div>
+
+        <input type="submit" value="確認画面へ" class="btn btn-info">
+    </form>
+</div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+
+
+</body>
+</html>
